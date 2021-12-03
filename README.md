@@ -118,8 +118,17 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What are the main differences between a stateful and a functional component?
 
+{stateless} component doesnt manage its own state and unable to keep track of other changing data. It relies on props. Stateful is able to keep track of changing data and use props. 
+
 2. When does a componentWillMount function be called? What about a componentWillUpdate?
 
-3. Define stateful logic.
+`componentWillMount` function is called before the render function has been executed. 
+`componentWillUpdate` is called when `shouldComponentUpdate` is true and any state changes with `this.setState` are not allowed as it strictly used to prepare for any upcoming updates. It does not trigger any updates. 
 
+3. Define stateful logic.
+any code used to manipulate or create any data. For example: adding products, editing products etc...
 4. What are the three step of creating a successful test? What is done in each phase? 
+
+(a) Arrange: render the component for testing 
+(b) Act: find targeted elements 
+(c) Assert: pass tests if elements exist in the component
